@@ -8,6 +8,7 @@ import { useRouter } from "next/navigation";
 import IconButton from "./ui/icon-button";
 import Currency from "./ui/currency";
 import usePreviewModal from "@/hooks/use-preview-modal";
+import useCart from "@/hooks/use-cart";
 
 type ProductCard = {
   data: Product;
@@ -15,7 +16,7 @@ type ProductCard = {
 
 export default function ProductCard({ data }: ProductCard) {
   const previewModal = usePreviewModal();
-  // const cart = useCart();
+  const cart = useCart();
   const router = useRouter();
 
   const handleClick = () => {
@@ -28,22 +29,21 @@ export default function ProductCard({ data }: ProductCard) {
     previewModal.onOpen(data);
   };
 
-  // const onAddToCart: MouseEventHandler<HTMLButtonElement> = (event) => {
-  //   event.stopPropagation();
+  const onAddToCart: MouseEventHandler<HTMLButtonElement> = (event) => {
+    event.stopPropagation();
 
-  //   cart.addItem(data);
-  // };
+    cart.addItem(data);
+  };
 
   return (
     <div
       onClick={handleClick}
       className="group cursor-pointer space-y-4 rounded-xl border bg-white p-3"
     >
-      {/* Image & actions */}
       <div className="relative aspect-square rounded-xl bg-gray-100">
         <Image
           src={data.images?.[0]?.url}
-          alt=""
+          alt={data.name}
           fill
           className="aspect-square rounded-md object-cover"
         />
@@ -54,18 +54,16 @@ export default function ProductCard({ data }: ProductCard) {
               icon={<Expand size={20} className="text-gray-600" />}
             />
             <IconButton
-              // onClick={onAddToCart}
+              onClick={onAddToCart}
               icon={<ShoppingCart size={20} className="text-gray-600" />}
             />
           </div>
         </div>
       </div>
-      {/* Description */}
       <div>
         <p className="text-lg font-semibold">{data.name}</p>
         <p className="text-sm text-gray-500">{data.category?.name}</p>
       </div>
-      {/* Price & Reiew */}
       <div className="flex items-center justify-between">
         <Currency value={data?.price} />
       </div>

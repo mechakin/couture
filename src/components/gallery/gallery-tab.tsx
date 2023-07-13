@@ -17,7 +17,7 @@ export default function GalleryTab({ image }: GalleryTabProps) {
             <Image
               fill
               src={image.url}
-              alt=""
+              alt={image.url}
               className="object-cover object-center"
             />
           </span>
