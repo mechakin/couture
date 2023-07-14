@@ -5,22 +5,22 @@ import IconButton from "@/components/ui/icon-button";
 import Currency from "@/components/ui/currency";
 import useCart from "@/hooks/use-cart";
 import { Product } from "@/types";
+import { cn } from "@/lib/utils";
 
 type CartItemProps = {
   data: Product;
+  className?: string;
 };
 
-export default function CartItem({ data }: CartItemProps) {
+export default function CartItem({ data, className }: CartItemProps) {
   const cart = useCart();
 
   const onRemove = () => {
     cart.removeItem(data.id);
   };
 
-  // TODO: make border-b disappear on the last item
-
   return (
-    <li className="flex border-b py-6">
+    <li className={cn("flex py-6", className)}>
       <div className="relative h-32 w-32 overflow-hidden rounded-md sm:h-48 sm:w-48">
         <Image
           fill

@@ -16,12 +16,13 @@ export default function Summary() {
 
   useEffect(() => {
     if (searchParams.get("success")) {
-      toast.success("Payment completed.");
+      console.log("in the success");
+      toast.success("Payment completed.", { id: "success" });
       removeAll();
     }
 
     if (searchParams.get("canceled")) {
-      toast.error("Something went wrong.");
+      toast.error("Something went wrong.", { id: "error" });
     }
   }, [searchParams, removeAll]);
 
