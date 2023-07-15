@@ -61,10 +61,12 @@ export default function ProductCard({ data }: ProductCard) {
         </div>
       </div>
       <div>
-        <p className="text-lg font-semibold">{data.name}</p>
-        <p className="text-sm text-gray-500">{data.category?.name}</p>
+        <p className="text-lg font-semibold tracking-tight">{data.name}</p>
+        <p className="text-sm tracking-tight text-gray-500">
+          {data.category?.name}
+        </p>
       </div>
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between tracking-tight">
         <Currency value={data?.price} />
       </div>
     </div>
