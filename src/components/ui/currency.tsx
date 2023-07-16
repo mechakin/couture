@@ -1,13 +1,14 @@
 "use client";
 
-import { formatter } from "@/lib/utils";
+import { cn, formatter } from "@/lib/utils";
 import { useEffect, useState } from "react";
 
 type CurrencyProps = {
   value?: string | number;
+  className?: string;
 };
 
-export default function Currency({ value = 0 }: CurrencyProps) {
+export default function Currency({ value = 0, className }: CurrencyProps) {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -16,5 +17,5 @@ export default function Currency({ value = 0 }: CurrencyProps) {
 
   if (!isMounted) return null;
 
-  return <div className="font-semibold">{formatter.format(Number(value))}</div>;
+  return <div className={cn("text-lg font-semibold tracking-tight", className)}>{formatter.format(Number(value))}</div>;
 }

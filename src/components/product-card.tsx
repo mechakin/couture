@@ -38,14 +38,14 @@ export default function ProductCard({ data }: ProductCard) {
   return (
     <div
       onClick={handleClick}
-      className="group cursor-pointer space-y-4 rounded-xl border bg-white p-3"
+      className="group cursor-pointer space-y-4 rounded-xl"
     >
-      <div className="relative aspect-square rounded-xl bg-gray-100">
+      <div className="relative aspect-[69/100] rounded-xl">
         <Image
           src={data.images?.[0]?.url}
           alt={data.name}
           fill
-          className="aspect-square rounded-md object-cover"
+          className="rounded-md object-cover"
         />
         <div className="absolute bottom-5 w-full px-6 opacity-0 transition group-hover:opacity-100">
           <div className="flex justify-center gap-x-6">
@@ -60,14 +60,13 @@ export default function ProductCard({ data }: ProductCard) {
           </div>
         </div>
       </div>
-      <div>
-        <p className="text-lg font-semibold tracking-tight">{data.name}</p>
-        <p className="text-sm tracking-tight text-gray-500">
-          {data.category?.name}
-        </p>
-      </div>
-      <div className="flex items-center justify-between tracking-tight">
-        <Currency value={data?.price} />
+      <div className="text-center">
+        <p className="tracking-tight pb-1">{data.name}</p>
+
+        <Currency
+          value={data?.price}
+          className="text-sm font-medium tracking-tight"
+        />
       </div>
     </div>
   );

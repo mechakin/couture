@@ -30,6 +30,8 @@ export default function Summary() {
     return total + Number(item.price);
   }, 0);
 
+  const totalQuantity = items.length;
+
   const onCheckout = async () => {
     const response = await axios.post(
       `${process.env.NEXT_PUBLIC_API_URL}/checkout`,
@@ -43,10 +45,15 @@ export default function Summary() {
 
   return (
     <div className="mt-16 rounded-lg bg-gray-50 px-4 py-6 sm:p-6 lg:col-span-5 lg:mt-0 lg:p-8">
-      <h2 className="text-lg font-medium text-gray-900">Order summary</h2>
+      <h2 className="flex justify-between text-lg font-semibold tracking-tight">
+        Order summary <span>{totalQuantity} Item(s)</span>
+      </h2>
       <div className="mt-6 space-y-4">
         <div className="flex items-center justify-between border-t border-gray-200 pt-4">
-          <div className="text-base font-medium text-gray-900">Order total</div>
+          <div className="text-lg font-semibold tracking-tight">
+            Order total
+          </div>
+
           <Currency value={totalPrice} />
         </div>
       </div>
