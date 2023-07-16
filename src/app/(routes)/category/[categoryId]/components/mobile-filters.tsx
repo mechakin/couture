@@ -39,9 +39,10 @@ export default function MobileFilters({ sizes, colors }: MobileFiltersProps) {
 
         {/* Dialog position */}
         <div className="fixed inset-0 z-40 flex">
-          <Dialog.Panel className="relative ml-auto flex h-full w-full max-w-xs flex-col overflow-y-auto bg-white py-4 pb-6 shadow-xl">
+          <Dialog.Panel className="relative ml-auto flex h-full w-full max-w-xs flex-col overflow-y-auto bg-neutral-200 py-4 pb-6 shadow-xl">
             {/* Close button */}
-            <div className="flex items-center justify-end px-4">
+            <div className="flex items-center justify-between px-4">
+              <p className="text-lg font-bold tracking-tight">couture</p>
               <IconButton icon={<X size={15} />} onClick={onClose} />
             </div>
 

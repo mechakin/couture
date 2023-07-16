@@ -38,8 +38,10 @@ export default async function CategoryPage({
 
   return (
     <Container>
-      <Billboard data={category.billboard} />
       <div className="px-4 pb-24 sm:px-6 lg:px-8">
+        <h1 className="py-16 pb-24 text-center text-4xl font-bold tracking-tight">
+          {category.name}
+        </h1>
         <div className="lg:grid lg:grid-cols-5 lg:gap-x-8">
           <MobileFilters sizes={sizes} colors={colors} />
           <div className="hidden lg:block">

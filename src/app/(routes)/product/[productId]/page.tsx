@@ -22,7 +22,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
   if (!product) return null;
 
   return (
-    <div className="bg-white">
+    <div className="bg-neutral-200">
       <Container>
         <div className="px-4 py-10 md:px-8">
           <div className="md:grid md:grid-cols-2 md:items-start md:gap-x-8">
