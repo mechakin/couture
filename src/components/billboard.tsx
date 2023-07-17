@@ -6,7 +6,7 @@ type BillboardProps = {
 
 export default function Billboard({ data }: BillboardProps) {
   return (
-    <div className="h-auto overflow-hidden rounded-xl p-4 sm:p-6 lg:p-8">
+    <div className="h-auto overflow-hidden rounded-xl p-8">
       <div
         style={{ backgroundImage: `url(${data?.imageUrl})` }}
         className="relative h-auto overflow-hidden rounded-xl bg-cover bg-center"

@@ -10,10 +10,10 @@ interface GalleryTabProps {
 
 export default function GalleryTab({ image }: GalleryTabProps) {
   return (
-    <Tab className="relative flex aspect-square cursor-pointer items-center justify-center rounded-md bg-white">
+    <Tab className="relative flex aspect-[69/100] cursor-pointer items-center justify-center rounded-xl">
       {({ selected }) => (
         <div>
-          <span className="absolute inset-0 aspect-square h-full w-full overflow-hidden rounded-md">
+          <span className="absolute inset-0 aspect-[69/100] h-full w-full overflow-hidden rounded-xl">
             <Image
               fill
               src={image.url}
@@ -23,8 +23,8 @@ export default function GalleryTab({ image }: GalleryTabProps) {
           </span>
           <span
             className={cn(
-              "absolute inset-0 rounded-md ring-2 ring-offset-2",
-              selected ? "ring-black" : "ring-transparent"
+              "absolute inset-0 rounded-xl ring-2 ring-offset-2",
+              selected ? "ring-neutral-400" : "ring-transparent"
             )}
           />
         </div>

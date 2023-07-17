@@ -13,18 +13,18 @@ type GalleryProps = {
 
 export default function Gallery({ images = [] }: GalleryProps) {
   return (
-    <Tab.Group as="div" className="flex flex-col-reverse">
-      <div className="mt-6 w-full max-w-2xl md:max-w-none">
-        <Tab.List className="grid grid-cols-4 gap-6">
+    <Tab.Group as="div" className="flex">
+      <div className="mr-12 md:max-w-none">
+        <Tab.List className="grid grid-rows-4 gap-6 w-20">
           {images.map((image) => (
             <GalleryTab key={image.id} image={image} />
           ))}
         </Tab.List>
       </div>
-      <Tab.Panels className="aspect-square w-full">
+      <Tab.Panels className="aspect-[69/100] w-full">
         {images.map((image) => (
           <Tab.Panel key={image.id}>
-            <div className="relative aspect-square h-full w-full overflow-hidden sm:rounded-lg">
+            <div className="relative aspect-[69/100] h-full w-full overflow-hidden rounded-xl">
               <Image
                 fill
                 src={image.url}
