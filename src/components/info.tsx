@@ -20,12 +20,12 @@ export default function Info({ data }: InfoProps) {
 
   return (
     <div className="text-center">
-      <h1 className="text-3xl tracking-tight font-semibold text-gray-900">
+      <h1 className="text-3xl font-semibold tracking-tight text-gray-900">
         {data.name}
       </h1>
       <div className="mt-3">
         <div className="text-2xl tracking-tight text-gray-900">
-          <Currency value={data?.price} className="font-normal"/>
+          <Currency value={data?.price} className="font-normal" />
         </div>
       </div>
       <hr className="my-4" />
@@ -42,11 +42,14 @@ export default function Info({ data }: InfoProps) {
           />
         </div>
       </div>
-      <div className="mt-10 gap-x-3 flex justify-center">
+      <div className="mt-10 flex justify-center gap-x-3">
         <Button onClick={onAddToCart} className="flex items-center gap-x-2">
           Add To Cart
           <ShoppingCart size={20} />
         </Button>
+      </div>
+      <div className="flex justify-center">
+        <p className="max-w-md pt-8 text-center">{data?.description}</p>
       </div>
     </div>
   );

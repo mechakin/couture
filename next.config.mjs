@@ -5,7 +5,7 @@ const config = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "res.cloudinary.com",
+        hostname: "uploadthing.com",
         port: "",
         pathname: "/**",
       },

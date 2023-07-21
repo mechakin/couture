@@ -24,11 +24,10 @@ export default async function ProductPage({ params }: ProductPageProps) {
   return (
     <Container>
       <div className="px-4 py-10 md:px-8">
-        <div className="md:grid md:grid-cols-4 md:items-start md:gap-x-8">
-          <div className="col-span-3">
+        <div className="lg:grid lg:grid-cols-2 md:items-start">
+          <div className="">
             <Gallery images={product.images} />
           </div>
-
           <div className="mt-10 px-0 md:mt-0 md:px-4">
             <Info data={product} />
           </div>

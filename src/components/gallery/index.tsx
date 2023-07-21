@@ -15,7 +15,7 @@ export default function Gallery({ images = [] }: GalleryProps) {
   return (
     <Tab.Group as="div" className="flex">
       <div className="mr-12 md:max-w-none">
-        <Tab.List className="grid grid-rows-4 gap-6 w-20">
+        <Tab.List className="grid grid-rows-4 gap-6 w-16">
           {images.map((image) => (
             <GalleryTab key={image.id} image={image} />
           ))}
