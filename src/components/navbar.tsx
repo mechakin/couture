@@ -16,7 +16,7 @@ export default async function Navbar() {
             <p className="text-xl font-bold tracking-tight">couture</p>
           </Link>
           <MainNav data={categories} />
-          <NavbarActions />
+          <NavbarActions data={categories}/>
         </div>
       </Container>
     </div>

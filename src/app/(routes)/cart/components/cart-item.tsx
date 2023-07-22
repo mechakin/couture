@@ -20,7 +20,7 @@ export default function CartItem({ data, className }: CartItemProps) {
   };
 
   return (
-    <li className={cn("flex py-6", className)}>
+    <li className={cn("flex", className)}>
       <div className="relative h-32 w-32 overflow-hidden rounded-md sm:h-48 sm:w-48">
         <Image
           fill
@@ -31,7 +31,7 @@ export default function CartItem({ data, className }: CartItemProps) {
       </div>
       <div className="relative ml-4 flex flex-1 flex-col justify-between sm:ml-6">
         <div className="absolute right-0 top-0 z-10">
-          <IconButton onClick={onRemove} icon={<X size={15} />} />
+          <IconButton onClick={onRemove} icon={<X size={15} />}/>
         </div>
 
         <div>

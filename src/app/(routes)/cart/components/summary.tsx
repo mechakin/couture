@@ -4,7 +4,7 @@ import axios from "axios";
 import { useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 
-import Button from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import Currency from "@/components/ui/currency";
 import useCart from "@/hooks/use-cart";
 import { toast } from "react-hot-toast";
@@ -44,12 +44,12 @@ export default function Summary() {
   };
 
   return (
-    <div className="mt-16 rounded-lg bg-gray-50 px-4 py-6 sm:p-6 lg:col-span-5 lg:mt-0 lg:p-8">
+    <div className="mt-16 rounded-lg bg-neutral-100 px-4 py-6 sm:p-6 lg:col-span-5 lg:mt-0 lg:p-8">
       <h2 className="flex justify-between text-lg font-semibold tracking-tight">
         Order summary <span>{totalQuantity} Item(s)</span>
       </h2>
       <div className="mt-6 space-y-4">
-        <div className="flex items-center justify-between border-t border-gray-200 pt-4">
+        <div className="flex items-center justify-between border-t border-neutral-200 pt-4">
           <div className="text-lg font-semibold tracking-tight">
             Order total
           </div>
@@ -60,9 +60,9 @@ export default function Summary() {
       <Button
         onClick={onCheckout}
         disabled={items.length === 0}
-        className="mt-6 w-full"
+        className="mt-6 w-full bg-black rounded-full text-base"
       >
-        Checkout
+        <span className="text-white">Checkout</span>
       </Button>
     </div>
   );

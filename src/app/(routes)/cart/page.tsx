@@ -22,8 +22,8 @@ export default function CartPage() {
 
   return (
     <Container>
-      <div className="px-4 py-6 sm:px-6 lg:px-8">
-        <h1 className="text-3xl font-bold text-black tracking-tight">Shopping Cart</h1>
+      <div className="px-8 py-6">
+        <h1 className="text-3xl font-bold text-black tracking-tight pb-6">Shopping Cart</h1>
         <div className="mt-4 gap-x-12 lg:grid lg:grid-cols-12 lg:items-start">
           <div className="lg:col-span-7">
             {cart.items.length === 0 && (

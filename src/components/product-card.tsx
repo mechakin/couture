@@ -43,7 +43,7 @@ export default function ProductCard({ data }: ProductCard) {
           <div className="flex justify-center gap-x-6">
             <IconButton
               onClick={onAddToCart}
-              icon={<ShoppingCart size={20} className="text-gray-600" />}
+              icon={<ShoppingCart size={20} className="text-neutral-600" />}
             />
           </div>
         </div>

@@ -24,7 +24,6 @@ export type Billboard = {
 export type Category = {
   id: string;
   name: string;
-  billboard: Billboard;
 };
 
 export type Size = {

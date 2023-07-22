@@ -3,7 +3,7 @@
 import qs from "query-string";
 import { useRouter, useSearchParams } from "next/navigation";
 
-import Button from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Color, Size } from "@/types";
 
@@ -48,7 +48,7 @@ export default function Filter({ data, name, valueKey }: FilterProps) {
           <div key={filter.id} className="flex items-center">
             <Button
               className={cn(
-                "rounded-md border border-gray-400 bg-transparent p-2 text-sm text-gray-800",
+                "rounded-md border border-neutral-400 bg-transparent p-2 text-sm text-neutral-800",
                 selectedValue === filter.id && "bg-black text-white"
               )}
               onClick={() => onClick(filter.id)}
