@@ -20,7 +20,7 @@ export default function CartItem({ data, className }: CartItemProps) {
   };
 
   return (
-    <li className={cn("flex", className)}>
+    <li className={cn("flex pb-8", className)}>
       <div className="relative h-32 w-32 overflow-hidden rounded-md sm:h-48 sm:w-48">
         <Image
           fill

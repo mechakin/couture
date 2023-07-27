@@ -16,7 +16,6 @@ export default function Summary() {
 
   useEffect(() => {
     if (searchParams.get("success")) {
-      console.log("in the success");
       toast.success("Payment completed.", { id: "success" });
       removeAll();
     }
