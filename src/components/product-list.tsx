@@ -11,8 +11,8 @@ type ProductListProps = {
 
 export default function ProductList({ title, items, className }: ProductListProps) {
   return (
-    <div className={cn("space-y-4 text-center", className)}>
-      <h3 className="pb-10 text-3xl font-bold tracking-tight">{title}</h3>
+    <div className={cn("space-y-4 text-center font-semibold", className)}>
+      <h3 className="pb-10 text-3xl tracking-tight">{title}</h3>
       {items.length === 0 && <NoResults />}
       <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
         {items.map((item) => (

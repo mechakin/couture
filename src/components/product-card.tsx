@@ -30,7 +30,7 @@ export default function ProductCard({ data }: ProductCard) {
   return (
     <div
       onClick={handleClick}
-      className="group cursor-pointer space-y-4 rounded-xl"
+      className="group cursor-pointer space-y-4 rounded-xl font-semibold"
     >
       <div className="relative aspect-[69/100] rounded-xl">
         <Image

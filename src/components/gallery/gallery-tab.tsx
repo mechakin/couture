@@ -23,7 +23,7 @@ export default function GalleryTab({ image }: GalleryTabProps) {
           </span>
           <span
             className={cn(
-              "absolute inset-0 rounded-xl ring-2 ring-offset-2",
+              "absolute inset-0 rounded-xl ring-2 ring-offset-neutral-800",
               selected ? "ring-neutral-400" : "ring-transparent"
             )}
           />
