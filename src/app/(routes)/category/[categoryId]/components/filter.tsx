@@ -1,7 +1,7 @@
 "use client";
 
-import qs from "query-string";
 import { useRouter, useSearchParams } from "next/navigation";
+import qs from "query-string";
 
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -48,7 +48,7 @@ export default function Filter({ data, name, valueKey }: FilterProps) {
           <div key={filter.id} className="flex items-center">
             <Button
               className={cn(
-                "rounded-md border border-neutral-400 bg-transparent p-2 text-sm text-neutral-800",
+                "rounded-xl border border-neutral-400 bg-neutral-500/10 p-2 text-sm text-neutral-800",
                 selectedValue === filter.id && "bg-black text-white"
               )}
               onClick={() => onClick(filter.id)}

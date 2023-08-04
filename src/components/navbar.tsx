@@ -1,8 +1,8 @@
 import Link from "next/link";
-import Container from "./ui/container";
-import MainNav from "./main-nav";
 import getCategories from "../actions/get-categories";
+import MainNav from "./main-nav";
 import NavbarActions from "./navbar-actions";
+import Container from "./ui/container";
 
 export const revalidate = 1;
 
@@ -16,7 +16,7 @@ export default async function Navbar() {
             <p className="text-xl font-bold tracking-tight">couture</p>
           </Link>
           <MainNav data={categories} />
-          <NavbarActions data={categories}/>
+          <NavbarActions data={categories} />
         </div>
       </Container>
     </div>

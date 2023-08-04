@@ -1,8 +1,8 @@
 "use client";
 
 import axios from "axios";
-import { useEffect } from "react";
 import { useSearchParams } from "next/navigation";
+import { useEffect } from "react";
 
 import { Button } from "@/components/ui/button";
 import Currency from "@/components/ui/currency";
@@ -43,7 +43,7 @@ export default function Summary() {
   };
 
   return (
-    <div className="mt-16 rounded-lg bg-neutral-100 px-4 py-6 sm:p-6 lg:col-span-5 lg:mt-0 lg:p-8">
+    <div className="mt-16 rounded-lg bg-neutral-100/50 px-4 py-6 sm:p-6 lg:col-span-5 lg:mt-0 lg:p-8">
       <h2 className="flex justify-between text-lg font-semibold tracking-tight">
         Order summary <span>{totalQuantity} Item(s)</span>
       </h2>
@@ -59,7 +59,7 @@ export default function Summary() {
       <Button
         onClick={onCheckout}
         disabled={items.length === 0}
-        className="mt-6 w-full bg-black rounded-full text-base"
+        className="mt-6 w-full rounded-full bg-black text-base"
       >
         <span className="text-white">Checkout</span>
       </Button>

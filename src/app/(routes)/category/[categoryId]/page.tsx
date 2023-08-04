@@ -1,14 +1,12 @@
-import Container from "@/components/ui/container";
-import Billboard from "@/components/billboard";
 import ProductCard from "@/components/product-card";
+import Container from "@/components/ui/container";
 import NoResults from "@/components/ui/no-results";
 
-import getProducts from "@/actions/get-products";
 import getCategory from "@/actions/get-category";
-import getSizes from "@/actions/get-sizes";
 import getColors from "@/actions/get-colors";
+import getProducts from "@/actions/get-products";
+import getSizes from "@/actions/get-sizes";
 
-import Filter from "./components/filter";
 import MobileFilters from "./components/mobile-filters";
 
 export const revalidate = 0;
@@ -42,20 +40,15 @@ export default async function CategoryPage({
         <h1 className="py-16 pb-24 text-center text-4xl font-semibold tracking-tight">
           {category.name}
         </h1>
-        <div className="lg:grid lg:grid-cols-5 lg:gap-x-8">
-          <MobileFilters sizes={sizes} colors={colors} />
-          <div className="hidden lg:block  rounded-md">
-            <Filter valueKey="sizeId" name="Sizes" data={sizes} />
-            <Filter valueKey="colorId" name="Colors" data={colors} />
-          </div>
-          <div className="mt-6 lg:col-span-4 lg:mt-0">
-            {products.length === 0 && <NoResults />}
-            <div className="grid gap-4 grid-cols-2 md:grid-cols-3">
-              {products.map((item) => (
-                <ProductCard key={item.id} data={item} />
-              ))}
-            </div>
-          </div>
+
+        <MobileFilters sizes={sizes} colors={colors} />
+
+        <div className="mt-6 grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-4">
+          {products.length === 0 && <NoResults />}
+
+          {products.map((item) => (
+            <ProductCard key={item.id} data={item} />
+          ))}
         </div>
       </div>
     </Container>

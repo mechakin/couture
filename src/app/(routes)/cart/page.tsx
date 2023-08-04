@@ -5,8 +5,8 @@ import { useEffect, useState } from "react";
 import Container from "@/components/ui/container";
 import useCart from "@/hooks/use-cart";
 
-import Summary from "./components/summary";
 import CartItem from "./components/cart-item";
+import Summary from "./components/summary";
 
 export const revalidate = 0;
 
@@ -23,7 +23,9 @@ export default function CartPage() {
   return (
     <Container>
       <div className="px-8 py-6">
-        <h1 className="text-3xl font-bold text-black tracking-tight pb-6">Shopping Cart</h1>
+        <h1 className="pb-6 text-3xl font-bold tracking-tight text-black">
+          Shopping Cart
+        </h1>
         <div className="mt-4 gap-x-12 lg:grid lg:grid-cols-12 lg:items-start">
           <div className="lg:col-span-7">
             {cart.items.length === 0 && (

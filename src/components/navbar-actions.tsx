@@ -1,18 +1,18 @@
 "use client";
 
 import useCart from "@/hooks/use-cart";
-import { Button } from "./ui/button";
-import { Link, Menu, ShoppingBag } from "lucide-react";
-import { useEffect, useState } from "react";
-import { usePathname, useRouter } from "next/navigation";
+import { cn } from "@/lib/utils";
 import { Category } from "@/types";
+import { Menu, ShoppingBag } from "lucide-react";
+import { usePathname, useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
+import { Button } from "./ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
-import { cn } from "@/lib/utils";
 
 type MainNavProps = {
   data: Category[];
@@ -42,18 +42,20 @@ export default function NavbarActions({ data }: MainNavProps) {
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button className="flex items-center justify-center rounded-full bg-black px-4 py-2">
-              <Menu size={20} color="white"/>
+              <Menu size={20} color="white" />
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="start">
             {routes.map((route) => {
               return (
-                <DropdownMenuItem key={route.href} onClick={() => router.push(route.href)} className={cn(
-                  "text-sm font-medium transition-colors hover:text-primary",
-                  route.active
-                    ? "text-black"
-                    : "text-muted-foreground"
-                )}>
+                <DropdownMenuItem
+                  key={route.href}
+                  onClick={() => router.push(route.href)}
+                  className={cn(
+                    "hover:text-primary text-sm font-medium transition-colors",
+                    route.active ? "text-black" : "text-muted-foreground"
+                  )}
+                >
                   {route.label}
                 </DropdownMenuItem>
               );

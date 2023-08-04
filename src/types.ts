@@ -5,15 +5,34 @@ export type Product = {
   description: string;
   price: string;
   isFeatured: boolean;
-  size: Size;
+  sizes: SizesOnProducts[];
   color: Color;
-  images: Image[]
+  images: Image[];
+};
+
+export type CartProduct = {
+  id: string;
+  category: Category;
+  name: string;
+  description: string;
+  price: string;
+  isFeatured: boolean;
+  sizes: SizesOnProducts[];
+  selectedSize: Size;
+  color: Color;
+  images: Image[];
+};
+
+export type SizesOnProducts = {
+  productId: string;
+  sizeId: string;
+  size: Size;
 };
 
 export type Image = {
   id: string;
   url: string;
-}
+};
 
 export type Billboard = {
   id: string;

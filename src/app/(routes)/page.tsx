@@ -1,8 +1,8 @@
+import Billboard from "@/components/billboard";
+import ProductList from "@/components/product-list";
 import Container from "@/components/ui/container";
 import getBillboard from "../../actions/get-billboard";
-import Billboard from "@/components/billboard";
 import getProducts from "../../actions/get-products";
-import ProductList from "@/components/product-list";
 
 export const revalidate = 0;
 
@@ -13,7 +13,7 @@ export default async function Home() {
     <Container>
       <div className="space-y-10 pb-10">
         <Billboard data={billboard} />
-        <p className="mx-auto max-w-3xl space-y-10 pb-4 px-8 text-center md:px-0">
+        <p className="mx-auto max-w-3xl space-y-10 px-8 pb-4 text-center md:px-0">
           Welcome to Couture, a haven for the fashion-forward and discerning
           individuals seeking unparalleled style and opulence. Step into a world
           of timeless elegance, where each meticulously crafted garment tells a

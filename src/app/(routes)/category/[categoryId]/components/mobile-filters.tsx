@@ -1,11 +1,11 @@
 "use client";
 
-import { useState } from "react";
-import { Plus, X } from "lucide-react";
 import { Dialog } from "@headlessui/react";
+import { Plus, X } from "lucide-react";
+import { useState } from "react";
 
-import IconButton from "@/components/ui/icon-button";
 import { Button } from "@/components/ui/button";
+import IconButton from "@/components/ui/icon-button";
 import { Color, Size } from "@/types";
 
 import Filter from "./filter";
@@ -23,17 +23,15 @@ export default function MobileFilters({ sizes, colors }: MobileFiltersProps) {
 
   return (
     <>
-      <Button onClick={onOpen} className="flex items-center gap-x-2 lg:hidden bg-black text-white rounded-full">
+      <Button
+        onClick={onOpen}
+        className="flex items-center gap-x-2  rounded-full bg-black text-white"
+      >
         Filters
         <Plus size={20} />
       </Button>
 
-      <Dialog
-        open={open}
-        as="div"
-        className="relative z-40 lg:hidden"
-        onClose={onClose}
-      >
+      <Dialog open={open} as="div" className="relative z-40" onClose={onClose}>
         {/* Background color and opacity */}
         <div className="fixed inset-0 bg-black bg-opacity-25" />
 

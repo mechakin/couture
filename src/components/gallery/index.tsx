@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import { Tab } from "@headlessui/react";
+import Image from "next/image";
 
 import { Image as ImageType } from "@/types";
 
@@ -15,7 +15,7 @@ export default function Gallery({ images = [] }: GalleryProps) {
   return (
     <Tab.Group as="div" className="flex flex-col-reverse lg:flex-row">
       <div className="mt-4 w-full max-w-2xl lg:mr-12 lg:mt-0 lg:w-fit lg:max-w-none">
-        <Tab.List className="grid lg:w-16 lg:grid-rows-4 lg:grid-cols-1 grid-cols-4 gap-6">
+        <Tab.List className="grid grid-cols-4 gap-6 lg:w-16 lg:grid-cols-1 lg:grid-rows-4">
           {images.map((image) => (
             <GalleryTab key={image.id} image={image} />
           ))}

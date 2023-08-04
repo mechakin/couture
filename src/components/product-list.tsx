@@ -1,7 +1,7 @@
-import { Product } from "@/types";
-import NoResults from "./ui/no-results";
-import ProductCard from "./product-card";
 import { cn } from "@/lib/utils";
+import { Product } from "@/types";
+import ProductCard from "./product-card";
+import NoResults from "./ui/no-results";
 
 type ProductListProps = {
   title: string;
@@ -9,7 +9,11 @@ type ProductListProps = {
   className?: string;
 };
 
-export default function ProductList({ title, items, className }: ProductListProps) {
+export default function ProductList({
+  title,
+  items,
+  className,
+}: ProductListProps) {
   return (
     <div className={cn("space-y-4 text-center font-semibold", className)}>
       <h3 className="pb-10 text-3xl tracking-tight">{title}</h3>

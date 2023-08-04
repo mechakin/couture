@@ -1,8 +1,8 @@
-import ProductList from "@/components/product-list";
-import Gallery from "@/components/gallery";
-import Info from "@/components/info";
 import getProduct from "@/actions/get-product";
 import getProducts from "@/actions/get-products";
+import Gallery from "@/components/gallery";
+import Info from "@/components/info";
+import ProductList from "@/components/product-list";
 import Container from "@/components/ui/container";
 
 export const revalidate = 0;
@@ -30,7 +30,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
             <Info data={product} />
           </div>
         </div>
-        <hr className="md:my-10 my-5" />
+        <hr className="my-5 md:my-10" />
         <ProductList
           title="Related Items"
           items={suggestedProducts}

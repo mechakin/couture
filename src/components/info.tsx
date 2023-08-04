@@ -2,13 +2,16 @@
 
 import { ShoppingCart } from "lucide-react";
 
-import Currency from "@/components/ui/currency";
 import { Button } from "@/components/ui/button";
-import { Product } from "@/types";
+import Currency from "@/components/ui/currency";
 import useCart from "@/hooks/use-cart";
+import { CartProduct, Product, Size } from "@/types";
+import { useState } from "react";
+import toast from "react-hot-toast";
 import {
   Select,
   SelectContent,
+  SelectGroup,
   SelectItem,
   SelectTrigger,
   SelectValue,
@@ -20,9 +23,17 @@ type InfoProps = {
 
 export default function Info({ data }: InfoProps) {
   const cart = useCart();
+  const [selectedSize, setSelectedSize] = useState<Size | null>();
 
   const onAddToCart = () => {
-    cart.addItem(data);
+    if (!selectedSize) return toast.error("Please select a size.");
+
+    const cartProduct: CartProduct = {
+      ...data,
+      selectedSize,
+    };
+
+    cart.addItem(cartProduct);
   };
 
   return (
@@ -49,14 +60,25 @@ export default function Info({ data }: InfoProps) {
         </div>
 
         <div className="my-2 flex items-center gap-x-4">
-          <Select>
+          <Select
+            onValueChange={(value) => {
+              const sizeObj = data.sizes.find(
+                (sizeObj) => sizeObj.size.name === value
+              );
+              setSelectedSize(sizeObj?.size);
+            }}
+          >
             <SelectTrigger className="w-36 rounded-full bg-neutral-100 font-medium text-black">
               <SelectValue placeholder="Size" />
             </SelectTrigger>
             <SelectContent className="bg-neutral-100 text-black">
-              <SelectItem value={data?.size?.name}>
-                {data?.size?.name}
-              </SelectItem>
+              <SelectGroup>
+                {data?.sizes?.map((sizeObj) => (
+                  <SelectItem key={sizeObj.size.id} value={sizeObj.size.name}>
+                    {sizeObj.size.name}
+                  </SelectItem>
+                ))}
+              </SelectGroup>
             </SelectContent>
           </Select>
         </div>

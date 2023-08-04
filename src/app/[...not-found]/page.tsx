@@ -10,7 +10,7 @@ export default async function NotFound() {
           Page not found
         </h1>
         <p className="pb-4">The page you requested could not be found.</p>
-        <Button className="max-w-fit bg-black text-white rounded-full">
+        <Button className="max-w-fit rounded-full bg-black text-white">
           <Link href="/">Go back</Link>
         </Button>
       </div>

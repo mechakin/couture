@@ -17,5 +17,9 @@ export default function Currency({ value = 0, className }: CurrencyProps) {
 
   if (!isMounted) return null;
 
-  return <div className={cn("text-lg font-semibold tracking-tight", className)}>{formatter.format(Number(value))}</div>;
+  return (
+    <div className={cn("text-lg font-semibold tracking-tight", className)}>
+      {formatter.format(Number(value))}
+    </div>
+  );
 }
