@@ -28,16 +28,16 @@ export default function CartPage() {
         </h1>
         <div className="mt-4 gap-x-12 lg:grid lg:grid-cols-12 lg:items-start">
           <div className="lg:col-span-7">
-            {cart.items.length === 0 && (
+            {cart?.items?.length === 0 && (
               <p className="text-neutral-500">No items added to cart.</p>
             )}
             <ul>
-              {cart.items.map((item, index) => (
+              {cart?.items?.map((item, index) => (
                 <CartItem
-                  key={item.id}
+                  key={item.id + item.selectedSize.id}
                   data={item}
                   className={`${
-                    index === cart.items.length - 1 ? "" : "border-b"
+                    index === cart?.items?.length - 1 ? "" : "border-b"
                   }`}
                 />
               ))}

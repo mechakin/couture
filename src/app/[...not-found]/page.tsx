@@ -5,7 +5,7 @@ import Link from "next/link";
 export default async function NotFound() {
   return (
     <Container>
-      <div className="pl-8">
+      <div className="-mt-44 h-screen flex flex-col items-center justify-center">
         <h1 className="pb-2 text-3xl font-bold tracking-tight">
           Page not found
         </h1>

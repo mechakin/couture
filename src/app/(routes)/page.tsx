@@ -7,7 +7,7 @@ import getProducts from "../../actions/get-products";
 export const revalidate = 0;
 
 export default async function Home() {
-  const billboard = await getBillboard("213b4605-0778-4e70-b3b0-03fa9a3e1474");
+  const billboard = await getBillboard("4ba8c917-7b67-4fc7-aab2-eda7ad2b03ed");
   const products = await getProducts({ isFeatured: true });
   return (
     <Container>

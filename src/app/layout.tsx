@@ -8,8 +8,9 @@ import "./globals.css";
 const font = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Store",
-  description: "Store",
+  title: "Couture",
+  description:
+    "Discover the world of Couture. Our designer store embodies luxury and style, showcasing meticulously crafted garments and accessories that redefine fashion. Immerse yourself in the allure of haute couture at its finest.",
 };
 
 export default function RootLayout({
