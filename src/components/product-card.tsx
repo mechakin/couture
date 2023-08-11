@@ -1,6 +1,5 @@
 "use client";
 
-import useCart from "@/hooks/use-cart";
 import { Product } from "@/types";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -11,7 +10,6 @@ type ProductCard = {
 };
 
 export default function ProductCard({ data }: ProductCard) {
-  const cart = useCart();
   const router = useRouter();
 
   const handleClick = () => {

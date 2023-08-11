@@ -48,11 +48,19 @@ export default function Filter({ data, name, valueKey }: FilterProps) {
           <div key={filter.id} className="flex items-center">
             <Button
               className={cn(
-                "rounded-xl border border-neutral-400 bg-neutral-500/10 p-2 text-sm text-neutral-800",
+                "rounded-xl  bg-neutral-500/10 hover:bg-neutral-500/20 p-2 text-sm text-neutral-800",
                 selectedValue === filter.id && "bg-black text-white"
               )}
               onClick={() => onClick(filter.id)}
             >
+              {valueKey === "colorId" ? (
+                <div
+                  className="mr-2 h-5 w-5 rounded-full"
+                  style={{ backgroundColor: filter.value }}
+                />
+              ) : (
+                <div />
+              )}
               {filter.name}
             </Button>
           </div>

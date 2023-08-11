@@ -36,7 +36,7 @@ export default async function CategoryPage({
 
   return (
     <Container>
-      <div className="px-4 pb-24 sm:px-6 lg:px-8">
+      <div className="px-4 sm:px-6 lg:px-8">
         <h1 className="py-16 pb-24 text-center text-4xl font-semibold tracking-tight">
           {category.name}
         </h1>
