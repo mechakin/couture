@@ -45,7 +45,7 @@ export default function NavbarActions({ data }: MainNavProps) {
               <Menu size={20} color="white" />
             </Button>
           </DropdownMenuTrigger>
-          <DropdownMenuContent align="start">
+          <DropdownMenuContent align="start" className="bg-neutral-200">
             {routes.map((route) => {
               return (
                 <DropdownMenuItem

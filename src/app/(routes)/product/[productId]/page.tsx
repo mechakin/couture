@@ -34,7 +34,6 @@ export default async function ProductPage({ params }: ProductPageProps) {
         <ProductList
           title="Related Items"
           items={suggestedProducts}
-          className="md:text-left"
         />
       </div>
     </Container>
