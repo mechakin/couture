@@ -25,8 +25,7 @@ export default function Gallery({ images = [] }: GalleryProps) {
         {images.map((image) => (
           <Tab.Panel key={image.id}>
             <div className="relative aspect-[69/100] h-full w-full overflow-hidden rounded-xl">
-              <Image
-                fill
+              <img
                 src={image.url}
                 alt="Image"
                 className="object-cover object-center"

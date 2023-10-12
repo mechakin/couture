@@ -14,8 +14,7 @@ export default function GalleryTab({ image }: GalleryTabProps) {
       {({ selected }) => (
         <div>
           <span className="absolute inset-0 aspect-[69/100] h-full w-full overflow-hidden rounded-xl">
-            <Image
-              fill
+            <img
               src={image.url}
               alt={image.url}
               className="object-cover object-center"

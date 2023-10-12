@@ -22,10 +22,9 @@ export default function ProductCard({ data }: ProductCard) {
       className="group cursor-pointer space-y-4 rounded-xl font-semibold"
     >
       <div className="relative aspect-[69/100] rounded-xl">
-        <Image
+        <img
           src={data.images?.[0]?.url}
           alt={data.name}
-          fill
           className="rounded-md object-cover"
         />
       </div>
