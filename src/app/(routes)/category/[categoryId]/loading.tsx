@@ -8,7 +8,7 @@ const Loading = () => {
         <Skeleton className="aspect-square w-full rounded-xl md:aspect-[3.5/1]" />
         <div className="mt-8 h-full lg:grid lg:grid-cols-5 lg:gap-x-8">
           <div className="mt-6 lg:col-span-5 lg:mt-0">
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            <div className="grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               <Skeleton className="aspect-[1/1.25] rounded-xl" />
               <Skeleton className="aspect-[1/1.25] rounded-xl" />
               <Skeleton className="aspect-[1/1.25] rounded-xl" />

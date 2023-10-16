@@ -12,7 +12,7 @@ export default function Billboard({ data }: BillboardProps) {
         className="relative h-auto overflow-hidden rounded-xl bg-cover bg-center"
       >
         <div className="flex h-[42rem] w-full flex-col items-center justify-center gap-y-8 text-center">
-          <div className="max-w-xs rounded-xl bg-neutral-200 p-4 text-3xl font-bold tracking-tight sm:max-w-xl sm:text-5xl lg:text-6xl">
+          <div className="max-w-min rounded-xl bg-neutral-200 p-4  text-3xl font-bold tracking-tight sm:max-w-xl sm:text-5xl lg:text-6xl">
             {data.label}
           </div>
         </div>
