@@ -2,10 +2,10 @@
 
 ## About
 
-Couture is a high-end e-commerce site that curates a selection of premium fashion and accessories. Our team meticulously handpicks items from renowned designers and emerging talents to ensure top-notch quality and style. Whether you're looking for a stunning evening gown or a statement accessory, Couture offers a seamless and elegant online shopping experience for the discerning shopper.
+Couture is a high-end e-commerce site that curates a selection of premium fashion and accessories.
 
 You can see the website live in action here: [https://youtu.be/FAJrhv8TEXw]
 
 ## Contributing
 
-I appreciate your interest, but I'm currently not seeking contributions for this particular project. Thanks for understanding!
+I'm currently not seeking contributions for this particular project. Thanks for understanding!
