@@ -23,5 +23,9 @@ export default async function getProducts(query: Query) {
     },
   });
 
-  return fetchJson<Product[]>(url);
+  try {
+    return await fetchJson<Product[]>(url);
+  } catch {
+    return [];
+  }
 }
