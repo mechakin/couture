@@ -1,9 +1,9 @@
 import { Size } from "@/types";
 
+import { fetchJson } from "@/lib/api";
+
 const url = `${process.env.NEXT_PUBLIC_API_URL}/sizes`;
 
 export default async function getSizes() {
-  const res = await fetch(url);
-
-  return res.json() as Promise<Size[]>;
+  return fetchJson<Size[]>(url);
 }

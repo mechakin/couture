@@ -8,6 +8,9 @@ import "./globals.css";
 const font = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_APP_URL ?? "https://couture-2i48c91x0-mechakin.vercel.app"
+  ),
   title: "Couture",
   description:
     "Discover the world of Couture. Our designer store embodies luxury and style, showcasing meticulously crafted garments and accessories that redefine fashion. Immerse yourself in the allure of haute couture at its finest.",
