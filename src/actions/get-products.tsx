@@ -1,4 +1,4 @@
-import { Product } from "@/types";
+import { type Product } from "@/types";
 import qs from "query-string";
 
 import { fetchJson } from "@/lib/api";

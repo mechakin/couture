@@ -1,4 +1,4 @@
-import { Billboard } from "@/types";
+import { type Billboard } from "@/types";
 
 import { fetchJson } from "@/lib/api";
 

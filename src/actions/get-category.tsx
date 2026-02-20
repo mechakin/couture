@@ -1,4 +1,4 @@
-import { Category } from "@/types";
+import { type Category } from "@/types";
 
 import { fetchJson } from "@/lib/api";
 
