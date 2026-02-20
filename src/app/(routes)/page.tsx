@@ -12,7 +12,7 @@ export default async function Home() {
   return (
     <Container>
       <div className="space-y-10 pb-10">
-        <Billboard data={billboard} />
+        {billboard && <Billboard data={billboard} />}
         <p className="mx-auto max-w-3xl space-y-10 px-8 pb-4 text-center md:px-0">
           Welcome to Couture, a haven for the fashion-forward and discerning
           individuals seeking unparalleled style and opulence. Step into a world
